@@ -50,6 +50,7 @@ export default function Home() {
 
   const haandleGenerateMatrix = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("Generating matrix");
     // generate matrix A
     const matrixA = Array.from({ length: numRows }, (_,i) => Array.from({ length: numColumns }, (_, j) => i+j))
     setMatrixA(matrixA);
@@ -60,7 +61,7 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <form action="" onSubmit={haandleGenerateMatrix} className="flex gap-4">
+      <form method="POST" action="" onSubmit={haandleGenerateMatrix} className="flex md:flex-row flex-col gap-4">
         <div className="flex flex-col justify-center">
           <label htmlFor="rows" className="text-lg font-semibold">
             Rows
@@ -71,7 +72,7 @@ export default function Home() {
             name="rows"
             value={numRows}
             onChange={(e) => setNumRows(parseInt(e.target.value))}
-            className="border border-gray-300 rounded-md w-20 p-2"
+            className="border border-gray-300 rounded-md md:w-20 p-2"
           />
         </div>
         <div className="flex flex-col justify-center">
@@ -84,7 +85,7 @@ export default function Home() {
             name="columns"
             value={numColumns}
             onChange={(e) => setNumColumns(parseInt(e.target.value))}
-            className="border border-gray-300 w-20 rounded-md p-2"
+            className="border border-gray-300 md:w-20 rounded-md p-2"
           />
         </div>
         <button
@@ -96,7 +97,7 @@ export default function Home() {
       </form>
       <hr />
       
-      {generated && <div className="flex gap-4">
+      {generated && <div className="flex md:flex-row flex-col gap-4">
         {/* // addition matrix input */}
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-lg font-semibold">Matrix A</h2>
