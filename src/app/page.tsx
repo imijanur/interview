@@ -72,7 +72,7 @@ export default function Home() {
             name="rows"
             value={numRows}
             onChange={(e) => setNumRows(parseInt(e.target.value))}
-            className="border border-gray-300 rounded-md md:w-20 p-2"
+            className="border border-gray-300 rounded-md md:w-20 p-2 dark:text-black"
           />
         </div>
         <div className="flex flex-col justify-center">
@@ -85,7 +85,7 @@ export default function Home() {
             name="columns"
             value={numColumns}
             onChange={(e) => setNumColumns(parseInt(e.target.value))}
-            className="border border-gray-300 md:w-20 rounded-md p-2"
+            className="border border-gray-300 md:w-20 rounded-md p-2 dark:text-black"
           />
         </div>
         <button
@@ -111,7 +111,7 @@ export default function Home() {
                         type="number"
                         key={j}
                         onChange={(e) => handleInputChange(e, matrixA, setMatrixA, i, j)}
-                        className="border w-16 border-gray-300 rounded-md p-2"
+                        className="border w-16 border-gray-300 rounded-md p-2 dark:text-black"
                         value={col}
                       />
                     ))}
@@ -135,7 +135,7 @@ export default function Home() {
                         type="number"
                         key={j}
                         onChange={(e) => handleInputChange(e, matrixB, setMatrixB, i, j)}
-                        className="border w-16 border-gray-300 rounded-md p-2"
+                        className="border w-16 border-gray-300 rounded-md p-2 dark:text-black"
                         value={col}
                       />
                     ))}
