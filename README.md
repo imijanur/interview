@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## About the project
+this project is a simple task for interview to calculate two dynaamic matrix and show the result in the table. The project is created using next.js and typescript and tailwindcss. The project is created using the following command:
+```bash
+npx create-next-app@latest
+```
+ There is no extra dependency used in this projects. To run the app on local server you just need to clone the project, ensure you have node installed on your system which supports nextjs version 14.2.5 and run the following command:
+```bash
+npm install
+npm run dev
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -15,6 +26,12 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Access live demo
+Open [https://interview-black-phi.vercel.app/](https://interview-black-phi.vercel.app/) with your browser to see the result of live server deployment on the vercel server.
+
+
+
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
